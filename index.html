@@ -5,10 +5,284 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    
     
     <script src="https://kit.fontawesome.com/8893b709f5.js" crossorigin="anonymous"></script>
+<style>
 
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    
+
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav{
+    background: #005577;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    
+}
+
+.logo{
+height:100px;
+clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 68%, 0 100%);
+right: 20px;
+}
+
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+   color: white;
+   font-size: 17px;
+   padding: 7px 13px;
+   border-radius: 3px;
+
+}
+
+a.active,a:hover{
+    background: #445566;
+    transition: 0.5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#check{
+    display: none;
+
+}
+@media(max-width:952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+
+    }
+}
+@media(max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #434220;
+        top: 80px;
+        left: -100%;
+        transition: all .5s;
+        text-align: center;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: turquoise;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+section{
+    background: linear-gradient(to right,rgba(23,34,55),transparent),url(ss4.jpg);
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+/*-------------------------CARD------------------------*/
+.card{
+        margin: 14px;
+        padding: 5px;
+        color: white;
+        background-color: rgba(32, 89, 102, 0.87);
+        width: 50%;
+        display: block;
+        text-align: center;
+}
+
+.card img{
+    height: 220px;
+    width: 280px;
+
+    padding:5%;
+}
+/*----------------------FORM----------------------*/
+.logooo{
+    
+    height: 100px;
+    width: 90px;
+    
+}
+
+.btn{
+    color: white;
+    background-color: black;
+    height: 35px;
+    width: 65px;
+}
+/*---------------FOOTER------------------------*/
+
+.footer-main-div{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: #272727;
+    padding: 20px 0px;
+}
+.footer-social-icons{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.footer-social-icons ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-social-icons ul li{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+    border-radius: 100%;
+    background: #32CD32;
+}
+.footer-social-icons ul li a{
+    color: #272727;
+    font-size: 25px;
+}
+.footer-social-icons ul li a i{
+    line-height: 50px;
+}
+.footer-menu-one{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 25px;
+
+}
+.footer-menu-one ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-menu-one ul li{
+    display: inline-block;
+    margin: 0px 20px;
+}
+.footer-menu-one ul li a:hover{
+    color: #32CD32;
+}
+.footer-menu-one ul li a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color:#fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.footer-menu-two{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+
+}
+.footer-menu-two ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-menu-two ul li{
+    display: inline-block;
+    margin: 0px 20px;
+}
+.footer-menu-two ul li a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color:#fff;
+    text-transform: uppercase;
+}
+.footer-menu-two ul li a:hover{
+    color: #272727;
+}
+.footer-bottom{
+    width: 100%;
+    height: auto;
+    margin-top: auto;
+    background: #32CD32;
+    padding: 8px;
+}
+.footer-bottom p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.footer-bottom p a{
+    color: #fff;
+
+}
+.footer-bottom p a:hover{
+    color: #272727;
+}
+
+
+
+
+
+</style>
 </head>
 <body>
     <!----------------------NAVBAR------------------------>
@@ -46,17 +320,12 @@
         <img src="d3.jpg" alt="">
         <p>MY WORK</p>
     </div>
-    <div class="card">
-        <h1>GALLERY</h1>
-        <img src="d4.jpg" alt="">
-        <p>MY WORK</p>
-    </div>
 
 </div>
 <!---------------------FORM---------------->
 <hr>
 <div>
-    <div style="width: 50%;border-radius: 10px;float: left;  background-color: lightblue    ;text-align: center;
+    <div style="width: 48%;border-radius: 10px;float: left;  background-color: lightblue    ;text-align: center;
     text-decoration: black;height: 465px;border: 4px solid black;padding: 15px;">
     <legend style="font-size: 40px; font-weight: 800; "></legend>
     <form action="action.php">
@@ -76,6 +345,7 @@
      </div>  
     </div>
 <!----------------------FOOTER---------------------------->
+<br>
 <div class="footer-main-div">
     <div class="footer-social-icons">
         <ul>
